@@ -108,6 +108,31 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <!-- copy the created jar to root folder using the antrun plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>3.0.0</version>
+                <executions>
+                    <execution>
+                        <id>copy-jar-to-root</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <copy
+                                        file="${project.build.directory}/${project.build.finalName}-jar-with-dependencies-and-tests.jar"
+                                        tofile="${project.basedir}/${project.build.finalName}-jar-with-dependencies-and-tests.jar"
+                                        overwrite="true"/>
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>

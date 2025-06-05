@@ -1,0 +1,12 @@
+-DgroupToRun=smoke
+-Dbrowser=chrome
+-Durl=https://www.naukri.com/
+-DskipTests=false
+
+
+
+
+cli cmd : java -Dbrowser=chrome -Durl=https://www.naukri.com/ -jar Naukriapp-1.0-SNAPSHOT-jar-with-dependencies-and-tests.jar
+mvn test cmd : mvn test -Dbrowser=chrome -Durl=https://www.naukri.com/
+mvn package cmd : mvn clean package -Dbrowser=chrome -Durl=https://www.naukri.com/ -DskipTests=false
+cli jar execution cmd : java -Dbrowser=chrome -Durl=https://www.naukri.com/ -jar Naukriapp-1.0-SNAPSHOT-jar-with-dependencies-and-tests.jar
