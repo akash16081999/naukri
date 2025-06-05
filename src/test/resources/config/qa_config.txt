@@ -1,0 +1,4 @@
+-DgroupToRun=smoke
+-Dbrowser=chrome
+-Durl=https://www.naukri.com/
+-DskipTests=false
