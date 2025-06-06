@@ -28,13 +28,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: |
-          mvn test \
-            -Dbrowser=chrome \
-            "-Durl=https://www.naukri.com/" \
-            "-Demail=laretax825@linacit.com" \
-            "-Dpassword=Testuser@123" \
-            -DgroupToRun=smoke
+      run: mvn test "-Dbrowser=chrome" "-Durl=https://www.naukri.com/" "-Demail=laretax825@linacit.com" "-Dpassword=Testuser@123" "-DgroupToRun=smoke"
 
     # # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     # - name: Update dependency graph
