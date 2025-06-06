@@ -8,7 +8,7 @@ public class BaseTest {
     private DriverFactory factory;
 
 
-    @BeforeSuite
+    @BeforeSuite(alwaysRun = true)
     public void setUp() {
         ConfigReader.intConfigReader();
         factory = new DriverFactory();
@@ -18,7 +18,7 @@ public class BaseTest {
     }
 
 
-    @AfterSuite
+    @AfterSuite(alwaysRun = true)
     public void tearDown() {
         factory.getDriver().quit();
 
