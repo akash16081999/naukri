@@ -3,7 +3,10 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="RunTests">
         <classes>
+
             <class name="com.qa.tests.LoginTest"/>
+
+
         </classes>
     </test>
 </suite>

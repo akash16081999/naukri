@@ -13,6 +13,7 @@ public class LoginTest extends BaseTest {
 
     @Test(groups = {"smoke"})
     public void loginWithValidCredentials() {
+        System.out.println("login executed");
         ed = new NaukriEntryDashboardPage(DriverFactory.getDr());
         LoginPage lp = ed.openNaukriLoginSlide();
 
